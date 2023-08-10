@@ -1,6 +1,49 @@
-#root {
-  max-width: 1280px;
-  margin: 0px;
-  padding: 0px;
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+:root {
+  /* ## Colors */
+
+  /* ### Primary */
+
+  --Orange: hsl(26, 100%, 55%);
+  --PaleOrange: hsl(25, 100%, 94%);
+
+  /* ### Neutral */
+
+  --VeryDarkblue: hsl(220, 13%, 13%);
+  --DarkGrayishblue: hsl(219, 9%, 45%);
+  --GrayishBlue: hsl(220, 14%, 75%);
+  --LightGrayishblue: hsl(223, 64%, 98%);
+  --White: hsl(0, 0%, 100%);
+  --Black: hsl(0, 0%, 0%);
+}
+* {
+  padding: 0px !important;
+  margin: 0px !important;
+}
+.App {
+  font-family: "Kumbh Sans", sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar {
+  width: 70vw !important;
+  padding: 2.5rem 0rem !important;
+  border-bottom: 1px solid var(--GrayishBlue);
+}
+.navbar .logo {
+  margin-right: 3rem !important;
+}
+.navLinks {
+  display: flex;
+  align-items: center;
+}
+.navLinks a {
+  color: var(--DarkGrayishblue);
+  text-decoration: none;
+  font-size: 16px;
+  margin-right: 1.4rem !important;
+}
+.navbar .cart {
+  margin-right: 2rem !important;
 }

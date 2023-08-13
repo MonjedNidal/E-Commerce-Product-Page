@@ -1,0 +1,124 @@
+:root {
+  /* ## Colors */
+
+  /* ### Primary */
+
+  --Orange: hsl(26, 100%, 55%);
+  --PaleOrange: hsl(25, 100%, 94%);
+
+  /* ### Neutral */
+
+  --VeryDarkblue: hsl(220, 13%, 13%);
+  --DarkGrayishblue: #68707d;
+  --GrayishBlue: hsl(220, 14%, 75%);
+  --LightGrayishblue: hsl(223, 64%, 98%);
+  --White: hsl(0, 0%, 100%);
+  --Black: hsl(0, 0%, 0%);
+}
+.navbar {
+  width: 70vw !important;
+  padding: 2.5rem 0rem !important;
+  border-bottom: 1px solid var(--GrayishBlue);
+}
+.navbar .logo {
+  margin-right: 3rem !important;
+}
+.navLinks {
+  display: flex;
+  align-items: center;
+}
+.navLinks a {
+  color: var(--DarkGrayishblue);
+  text-decoration: none;
+  font-size: 16px;
+  margin-right: 1.4rem !important;
+  transition: 0.2s all;
+}
+.navLinks a:hover {
+  color: var(--Orange);
+  text-decoration: underline;
+}
+.navbar .cartIcon {
+  margin-right: 2rem !important;
+}
+.navbar .cartIcon:hover {
+  cursor: pointer;
+}
+.navbar .avatar {
+  border-radius: 50%;
+}
+.navbar .avatar:hover {
+  cursor: pointer;
+  border: 2px solid hsl(26, 100%, 50%);
+}
+
+.navbar .numOfItems {
+  background-color: var(--Orange);
+  font-weight: 700;
+  font-size: 13px;
+  padding: 1px 8px !important;
+  border-radius: 15px;
+  color: var(--White);
+  position: absolute;
+  top: 0px;
+  left: 15px;
+}
+
+.navbar .cart {
+  width: 24rem;
+  background-color: var(--White);
+  height: fit-content;
+  top: 130%;
+  right: -55%;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.navbar .cart h5 {
+  font-weight: 700;
+  padding: 1rem !important;
+  border-bottom: 1px solid var(--GrayishBlue);
+}
+.navbar .cart .cartContent {
+  height: 10rem;
+}
+.navbar .cart .filledCartContent {
+  color: var(--DarkGrayishblue);
+}
+.navbar .cart .filledCartContent img:first-child {
+  border-radius: 8px;
+}
+.navbar .cart .filledCartContent .totalPrice {
+  font-weight: 700;
+  color: black;
+}
+.navbar .cart .filledCartContent .checkoutBtn {
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--White);
+  background-color: var(--Orange);
+  display: block;
+  margin-top: 2rem !important;
+  padding: 1rem !important;
+  text-align: center;
+  width: 100% !important;
+  font-weight: 700;
+  font-size: 18px;
+  transition: 0.2s all;
+}
+.navbar .cart .filledCartContent .checkoutBtn:hover {
+  transform: scale(1.06);
+}
+.navbar .cart .filledCartContent .deleteIcon {
+  width: 1.2rem;
+}
+.navbar .cart .filledCartContent .deleteIcon:hover {
+  filter: brightness(0.8) saturate(10%);
+  cursor: pointer;
+}
+
+@media (max-width: 985px) {
+  .navLinks {
+    position: absolute;
+  }
+}

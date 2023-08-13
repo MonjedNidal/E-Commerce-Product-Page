@@ -10,7 +10,7 @@
   /* ### Neutral */
 
   --VeryDarkblue: hsl(220, 13%, 13%);
-  --DarkGrayishblue: hsl(219, 9%, 45%);
+  --DarkGrayishblue: #68707d;
   --GrayishBlue: hsl(220, 14%, 75%);
   --LightGrayishblue: hsl(223, 64%, 98%);
   --White: hsl(0, 0%, 100%);
@@ -18,32 +18,170 @@
 }
 * {
   padding: 0px !important;
-  margin: 0px !important;
 }
 .App {
   font-family: "Kumbh Sans", sans-serif;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  position: relative;
 }
 
-.navbar {
-  width: 70vw !important;
-  padding: 2.5rem 0rem !important;
-  border-bottom: 1px solid var(--GrayishBlue);
+main {
+  height: 100%;
 }
-.navbar .logo {
-  margin-right: 3rem !important;
+
+main .images {
+  margin-right: 6rem !important;
 }
-.navLinks {
+
+main .mainImg {
+  width: 27rem;
+  border-radius: 12px;
+  margin-bottom: 1.7rem !important;
+  box-shadow: 0px 15px 13px var(--PaleOrange);
+}
+main .thumbnail {
+  width: 6rem;
+  border-radius: 8px;
+  box-shadow: 0px 15px 13px var(--PaleOrange);
+  transition: 0.3s opacity;
+}
+main .thumbnail:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+main .images .selected {
+  border: 2px solid hsl(26, 100%, 50%);
+  opacity: 0.7;
+}
+
+main .productText {
+  max-width: 400px;
+}
+main .productText .company {
+  color: var(--Orange);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+main .productText h1 {
+  font-weight: 700;
+  margin-top: 1rem !important;
+  margin-bottom: 2rem !important;
+}
+main .productText .description {
+  font-size: 15px;
+  color: var(--DarkGrayishblue);
+}
+main .productText .price {
+  font-weight: 700;
+  font-size: 1.4em;
+}
+main .productText .sale {
+  margin-bottom: 0.1rem !important;
+  margin-left: 1rem;
+  background-color: var(--PaleOrange);
+  color: var(--Orange);
+  font-size: 15px;
+  font-weight: 700;
+  padding: 0.1rem 0.4rem !important;
+  border-radius: 8px;
+}
+
+main .productText .oldPrice {
+  font-size: 15px;
+  text-decoration: line-through;
+  color: var(--DarkGrayishblue);
+}
+
+main .productText .numberOfItems {
+  background-color: hsl(240, 6%, 94%);
+  width: fit-content;
+  border-radius: 8px;
+  margin-top: 1rem !important;
+}
+
+main .productText .numberOfItems .minus,
+.plus {
+  padding: 0.5rem 0.8rem !important;
+}
+
+.minus:hover,
+.plus:hover {
+  cursor: pointer !important ;
+}
+
+main .productText .numberOfItems span {
+  padding: 0rem 2rem !important;
+  font-weight: 700;
+}
+
+main .productText a {
+  margin-top: 1rem !important;
+  background-color: var(--Orange);
+  padding: 0.3rem 0px !important;
+  border-radius: 8px;
+  margin-left: 0.6rem;
+  text-decoration: none;
+  color: var(--White) !important;
+  width: 13rem !important;
+  text-align: center;
+  box-shadow: 0px 15px 13px var(--PaleOrange);
+  transition: 0.2s all;
+}
+main .productText a:hover {
+  transform: scale(1.04);
+}
+main .productText a img {
+  width: 1.7rem !important;
+  margin-right: 0.6rem;
+  padding-bottom: 0.2rem !important;
+}
+
+.showImages {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 1000;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
-.navLinks a {
-  color: var(--DarkGrayishblue);
-  text-decoration: none;
-  font-size: 16px;
-  margin-right: 1.4rem !important;
+
+.showImages .mainImg {
+  width: 30rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
 }
-.navbar .cart {
-  margin-right: 2rem !important;
+.showImages .thumbnail {
+  width: 6.1rem;
+  border-radius: 8px;
+}
+
+.showImages .thumbnails {
+  justify-content: space-around !important;
+}
+.showImages .thumbnail:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+.showImages .images .selected {
+  border: 2px solid hsl(26, 100%, 50%);
+  box-shadow: 0px 10px 10px #2f2d2d !important;
+}
+
+.container {
+  max-width: 850px !important;
+}
+
+@media (max-width: 985px) {
+  .d-flex {
+    display: block !important;
+  }
+  .navBar .navLinks {
+    display: none !important;
+  }
 }

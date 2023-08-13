@@ -1,0 +1,21 @@
+.sidebar {
+  width: 50vw;
+  height: 100%;
+  background-color: aquamarine !important;
+  top: 0px;
+  left: 0px;
+  z-index: 1111;
+  display: flex;
+  justify-content: center;
+}
+.sidebar .navLinks {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+}
+.sidebar .navLinks a {
+  color: var(--Black);
+  font-weight: 700;
+  font-size: larger;
+  margin-top: 1rem;
+}

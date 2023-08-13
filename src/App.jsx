@@ -9,6 +9,7 @@ import Sidebar from "./Components/Sidebar";
 function App() {
   const [cartContent, setCartContent] = useState(0);
   const [imageZoomToggle, setImageZoomToggle] = useState(false);
+  const [isShowSideBar, setIsShowSideBar] = useState(false);
 
   const handleBackgroundClick = (event) => {
     if (event.target === event.currentTarget) {
@@ -17,6 +18,10 @@ function App() {
   };
   return (
     <div className="App position-relative">
+      <Sidebar
+        setIsShowSideBar={setIsShowSideBar}
+        className={isShowSideBar ? "showSidebar" : "hideSidebar"}
+      />
       {imageZoomToggle ? (
         <div
           onClick={handleBackgroundClick}
@@ -27,8 +32,11 @@ function App() {
       ) : (
         ""
       )}
-      {/* <Sidebar /> */}
-      <NavBar cartContent={cartContent} setCartContent={setCartContent} />
+      <NavBar
+        setIsShowSideBar={setIsShowSideBar}
+        cartContent={cartContent}
+        setCartContent={setCartContent}
+      />
       <ProductPage
         setImageZoomToggle={setImageZoomToggle}
         setCartContent={setCartContent}

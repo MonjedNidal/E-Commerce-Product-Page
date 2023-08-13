@@ -1,17 +1,31 @@
 .sidebar {
   width: 50vw;
   height: 100%;
-  background-color: aquamarine !important;
+  background-color: var(--White) !important;
   top: 0px;
-  left: 0px;
+  left: -50vw;
   z-index: 1111;
-  display: flex;
-  justify-content: center;
+  padding-left: 3rem !important;
+  transition: 0.2s all;
+}
+.showSidebar {
+  transform: translateX(50vw);
+}
+.hideSidebar {
+  transform: translateX(-69%) !important ;
+}
+.closeIcon {
+  margin-top: 2rem;
+  width: 1.2rem;
+}
+.closeIcon:hover {
+  cursor: pointer;
 }
 .sidebar .navLinks {
   display: flex;
   flex-direction: column;
   margin-top: 3rem;
+  align-items: start !important;
 }
 .sidebar .navLinks a {
   color: var(--Black);

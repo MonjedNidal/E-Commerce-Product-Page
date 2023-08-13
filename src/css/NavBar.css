@@ -16,7 +16,7 @@
   --Black: hsl(0, 0%, 0%);
 }
 .navbar {
-  width: 70vw !important;
+  width: 70vw;
   padding: 2.5rem 0rem !important;
   border-bottom: 1px solid var(--GrayishBlue);
 }
@@ -70,6 +70,7 @@
   height: fit-content;
   top: 130%;
   right: -55%;
+  z-index: 500;
   border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
@@ -117,8 +118,31 @@
   cursor: pointer;
 }
 
+.menuIcon {
+  display: none;
+  margin-right: 1rem;
+}
+.menuIcon:hover {
+  cursor: pointer;
+}
+
 @media (max-width: 985px) {
-  .navLinks {
-    position: absolute;
+  .menuIcon {
+    display: block !important;
+  }
+  .navbar .navLinks {
+    display: none !important;
+  }
+  .navbar {
+    display: flex !important;
+    flex-direction: row;
+    width: 100vw !important;
+    padding: 1rem 1rem !important;
+  }
+  .navbar .cart {
+    top: 150%;
+    width: 95vw;
+    right: -5px;
+    max-width: 400px;
   }
 }

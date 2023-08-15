@@ -16,12 +16,10 @@ Users should be able to:
 ### Screenshot
 
 ![](./design/desktop-preview.jpg)
-
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
-
+- Solution URL: [https://www.frontendmentor.io/solutions/responsive-ecommerce-product-page-by-vitereactjs-ZUbbE2TdOw](https://www.frontendmentor.io/solutions/responsive-ecommerce-product-page-by-vitereactjs-ZUbbE2TdOw)
+- Live Site URL: [https://monjed-ecommerce-product-page.netlify.app](https://monjed-ecommerce-product-page.netlify.app/)
 ## My process
 
 ### Built with
